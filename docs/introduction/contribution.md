@@ -9,12 +9,12 @@ Riddle Language 变得更好。请参考以下指南来参与贡献。
 
 ## 贡献流程
 
-1. **Fork 仓库**：首先从 Riddle Language 的 [GitHub 仓库](https://github.com/wangziwenhk/Riddle-Language) fork 一份副本到你的个人账号。
+1. **Fork 仓库**：首先从 Riddle Language 的 [GitHub 仓库](https://github.com/wangziwenhk/riddle-lang) fork 一份副本到你的个人账号。
 
 2. **克隆仓库**：将 fork 后的项目克隆到本地计算机。
 
     ```bash
-    git clone https://github.com/你的用户名/Riddle-Language.git
+    git clone https://github.com/你的用户名/riddle-lang.git
     ```
 
 3. **创建新分支**：为你的工作创建一个新分支。请确保分支名称描述清楚你将进行的更改。例如：
@@ -47,7 +47,7 @@ Riddle Language 变得更好。请参考以下指南来参与贡献。
 
 ### 报告问题
 
-如果你发现了 Bug 或有改进建议，请通过 [GitHub Issues](https://github.com/wangziwenhk/Riddle-Language/issues) 报告问题。为了让我们更好地帮助你，请提供尽可能详细的信息：
+如果你发现了 Bug 或有改进建议，请通过 [GitHub Issues](https://github.com/wangziwenhk/riddle-lang/issues) 报告问题。为了让我们更好地帮助你，请提供尽可能详细的信息：
 
 - 你使用的 Riddle Language 版本
 - 复现步骤
@@ -70,8 +70,8 @@ Riddle Language 变得更好。请参考以下指南来参与贡献。
 
 ## 与社区互动
 
-- 如果你对某个问题有疑问或建议，欢迎在 GitHub Discussions 或者通过 [我们的开发者论坛](https://github.com/wangziwenhk/Riddle-Language/discussions) 与社区交流。
-- 我们希望在讨论中保持尊重和包容，所有贡献者都应遵守 [行为准则](https://github.com/wangziwenhk/Riddle-Language/blob/main/.github/CODE_OF_CONDUCT.md)。
+- 如果你对某个问题有疑问或建议，欢迎在 GitHub Discussions 或者通过 [我们的开发者论坛](https://github.com/wangziwenhk/riddle-lang/discussions) 与社区交流。
+- 我们希望在讨论中保持尊重和包容，所有贡献者都应遵守 [行为准则](https://github.com/wangziwenhk/riddle-lang/blob/main/.github/CODE_OF_CONDUCT.md)。
 
 ## License
 

@@ -12,6 +12,11 @@ nav:
   - 简介:
       - 开始: index.md
       - 如何贡献: introduction/contribution.md
+  - 语言基础:
+      - 变量: lang/variable.md
+      - 类: lang/class.md
+      - 表达式: lang/expr.md
+      - 未定义行为: lang/ub.md
   - 对象与变量:
       - 对象: object/objects.md
   - 实现:

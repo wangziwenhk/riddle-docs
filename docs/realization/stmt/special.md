@@ -15,7 +15,7 @@
 
 ## ProgramStmt
 
-继承自 [BaseStmt](#BaseStmt)
+继承自 [BaseStmt](#basestmt)
 
 程序的根语句。当前版本下只能表示一个源文件。
 

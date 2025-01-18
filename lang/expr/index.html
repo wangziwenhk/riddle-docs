@@ -529,9 +529,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      引用 (References)
+      运算符
     </span>
   </a>
   
@@ -700,9 +700,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      引用 (References)
+      运算符
     </span>
   </a>
   
@@ -724,7 +724,123 @@
 
 
 <h1 id="_1">表达式<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="references">引用 (References)<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p>表达式是 <em>运算符</em> 和它们的 <em>操作数</em> 的序列，它指定一项计算。</p>
+<p>表达式的求值可以产生一个结果（比如 <code>2 + 2</code> 的求值产生结果 <code>4</code>），也可能产生副作用（比如对 <code>print("4")</code> 的求值在标准输出上打印字符 <code>'4'</code>）。</p>
+<p>每个 Riddle 表达式均被描述为具有两种独立的性质：类型和值类别。</p>
+<h2 id="_2">运算符<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+    <tr>
+        <th colspan="7" style="text-align: center;">
+            常见运算符
+        </th>
+    </tr>
+    <tr>
+        <th style="text-align: center;">赋值</th>
+        <th style="text-align: center;">自增/自减</th>
+        <th style="text-align: center;">算术</th>
+        <th style="text-align: center;">逻辑</th>
+        <th style="text-align: center;">比较</th>
+        <th style="text-align: center;">成员访问</th>
+        <th style="text-align: center;">其他</th>
+    </tr>
+    <tr>
+        <td rowspan="3">
+            <pre><code style="text-align: center;">
+a = b
+a += b
+a -= b
+a *= b
+a /= b
+a %= b
+a &= b
+a |= b
+a ^= b
+a <<= b
+a >>= b
+            </code></pre>
+        </td>
+        <td rowspan="3">
+            <pre><code style="text-align: center;">
+++a
+--a
+a++
+a--
+            </code></pre>
+        </td>
+        <td rowspan="3">
+            <pre><code style="text-align: center;">
++a
+-a
+a + b
+a - b
+a * b
+a / b
+a % b
+~a
+a & b
+a | b
+a ^ b
+a << b
+a >> b
+            </code></pre>
+        </td>
+        <td rowspan="3">
+            <pre><code style="text-align: center;">
+!a
+a && b
+a || b
+            </code></pre>
+        </td>
+        <td rowspan="3">
+            <pre><code style="text-align: center;">
+a == b
+a != b
+a < b
+a > b
+a <= b
+a >= b
+a <=> b
+            </code></pre>
+        </td>
+        <td rowspan="3">
+            <pre><code style="text-align: center;">
+a[...]
+*a
+&a
+a->b
+a.b
+a->*b
+a.*b
+            </code></pre>
+        </td>
+        <td>
+            <pre style="text-align:center;">
+函数调用
+            <code >
+a(...)
+            </code>
+            </pre>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <pre style="text-align:center;">
+逗号
+            <code >
+a, b
+            </code>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <pre style="text-align:center;">
+条件
+            <code >
+a ? b : c
+            </code>
+        </td>
+    </tr>
+</table>
 
 
 

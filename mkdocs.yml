@@ -17,13 +17,7 @@ nav:
       - 类: lang/class.md
       - 表达式: lang/expr.md
       - 未定义行为: lang/ub.md
-  - 对象与变量:
-      - 对象: object/objects.md
-  - 实现:
-      - 语句:
-          - realization/stmt/index.md
-          - 特殊语句: realization/stmt/special.md
-          - 字面量和常量: realization\stmt\constant.md
+      - 函数: lang/function.md
 
 theme:
   name: material

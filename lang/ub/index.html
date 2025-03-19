@@ -18,7 +18,7 @@
         <link rel="prev" href="../expr/">
       
       
-        <link rel="next" href="../../object/objects/">
+        <link rel="next" href="../function/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -245,55 +245,6 @@
   
 
       
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../object/objects/" class="md-tabs__link">
-          
-  
-    
-  
-  对象与变量
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../realization/stmt/" class="md-tabs__link">
-          
-  
-    
-  
-  实现
-
-        </a>
-      </li>
-    
-  
-
-    
-  
-
-      
     </ul>
   </div>
 </nav>
@@ -387,6 +338,8 @@
   
     
     
+      
+        
       
         
       
@@ -511,6 +464,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    未定义行为
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -521,6 +485,57 @@
 
       </a>
       
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      空指针解引用
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    函数
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -528,103 +543,6 @@
             
           </ul>
         </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../object/objects/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    对象与变量
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    
-  
-  
-    <a href="../../realization/stmt/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    实现
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-  
-
       
     </li>
   
@@ -652,6 +570,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      空指针解引用
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -668,6 +603,14 @@
 <h1 id="_1">未定义行为<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>未定义行为是指没有在标准中提供明确实现的或者实现方式因平台和编译器而异的行为。</p>
 <p>无论在任何情况下你都不应该使用未定义行为，这可能让你的程序的最终效果不尽人意。</p>
+<p>以下是未定义行为。</p>
+<h2 id="_2">空指针解引用<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>保存被析构对象的引用/指针</li>
+<li>对空指针解引用</li>
+<li>对无效地址的指针解引用</li>
+<li>对保存被 delete 对象的地址的指针解引用</li>
+</ul>
 
 
 
@@ -722,13 +665,13 @@
         
         
           
-          <a href="../../object/objects/" class="md-footer__link md-footer__link--next" aria-label="下一页: 对象">
+          <a href="../function/" class="md-footer__link md-footer__link--next" aria-label="下一页: 函数">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                对象
+                函数
               </div>
             </div>
             <div class="md-footer__button md-icon">

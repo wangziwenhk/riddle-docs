@@ -1,0 +1,72 @@
+# 基本类型
+
+## 概述
+Riddle 把最底层、由编译器直接支持的类型称为 **基本类型 (Primitive Type)**。
+
+其中包含
+- [整型](#整型)
+- [浮点类型](#浮点类型)
+- [空类型](#空类型)
+
+## 整型
+### 标准整型
+$\space\space$ <span style={{color:'#1e90ff'}}>**int**</span> — 基本整型。保证具有至少 16 位的宽度。但是，在 32/64 位系统上，几乎完全保证具有至少 32 位的宽度（见下文）。
+
+$\space\space$ <span style={{color:'#1e90ff'}}>**short**</span> — 更小的整型。将针对空间进行优化，并将具有至少 16 位的宽度。
+
+$\space\space$ <span style={{color:'#1e90ff'}}>**long**</span> — 更长的整型。将具有至少 32 位的宽度。
+
+$\space\space$ <span style={{color:'#1e90ff'}}>**byte**</span> — 表示一个字节的整型。在任何情况下都为 8 位的宽度。
+
+当以上类型名称前加 `u` 字符时，表示该整型是无符号的（例如 `uint`, `ushort`）。
+
+注意：有符号和无符号整型定义的整数算术运算不同。
+
+### 布尔类型
+
+$\space\space$ <span style={{color:'#1e90ff'}}>**bool**</span> — 整型，能够容纳两个值之一：true 或 false。
+
+### 字符类型
+字符类型是用于字符表示的整型。
+
+$\space\space$ <span style={{color:'#1e90ff'}}>**char**</span> — 用于字符表示的类型，可以在目标系统上最有效地处理。
+char 的符号性取决于编译器和目标平台：ARM 和 PowerPC 的默认值通常是无符号的，x86 和 x64 的默认值通常是有符号的。
+你不应该使用 char 来表示实际计算机上的一个字节。相反，你应该使用 [byte](#标准整型) 来表示。
+
+## 浮点类型
+### 标准浮点类型
+以下三种类型及其 cv 限定版本统称为标准浮点类型。
+
+$\space\space$ <span style={{color:'#1e90ff'}}>**float**</span> — 单精度浮点类型。通常为 [IEEE-754 binary32 格式](https://en.wikipedia.org/wiki/Single-precision_floating-point_format)。
+
+$\space\space$ <span style={{color:'#1e90ff'}}>**double**</span> — 双精度浮点类型。通常为 [IEEE-754 binary64 格式](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)。
+
+$\space\space$ <span style={{color:'#1e90ff'}}>**ldouble**</span> — 扩展精度浮点类型。通常为 [IEEE-754 binary128 格式](https://en.wikipedia.org/wiki/Quadruple-precision_floating-point_format)。
+但可能部分机器不支持该类型，对于这部分机器，我们将使用软件模拟。
+
+### 属性
+浮点类型可以支持特殊值。
+- 无穷大（正无穷大和负无穷大），将使用 [INFINITY]() （如果支持）
+- 负零，`-0.0`。它与正零比较相等，但在某些算术运算中意义重大（例如 `1.0 / 0.0 == INFINITY`，但 `1.0 / -0.0 == -INFINITY`），以及对于某些数学函数，例如 [sqrt]()。
+- 非数 (NaN)，它与任何事物（包括自身）都不相等。多个位模式表示 NaN。参见 [NaN]()。注意，Riddle 并没有对信令 NaN 的支持。
+
+浮点数可以与[算术运算符]() `+`、`-`、`/` 和 `*` 以及来自 [std.math]() 的各种数学函数一起使用。内置运算符和库函数都可能引发浮点异常并设置 [errno]()，如 [math errhandling]() 中所述。
+
+浮点表达式可能具有比其类型指示的更大的范围和精度。浮点表达式也可能是收缩的，也就是说，计算时就好像所有中间值都具有无限的范围和精度。标准 Riddle 不限制浮点运算的精度。
+
+对浮点数的一些操作会受到浮点[环境状态]()的影响并修改其状态（最值得注意的是，[舍入方向]()）。
+
+## 值域
+
+下表提供了常用数值表示的限制参考。
+
+Riddle 标准要求 N 位有符号整数的最小保证范围是
+$-2^{n-1}$ 到 $+2^{n-1}-1$ （例如，对于有符号 8 位类型，为 **−128** 到 **127**），
+这对应于[补码](https://en.wikipedia.org/wiki/Two%27s_complement)的限制。
+
+浮点类型 T 的范围定义如下
+- 最小保证范围是从 T 中可表示的最负有限浮点数到 T 中可表示的最正有限浮点数。
+- 如果负无穷大可在 T 中表示，则 T 的范围将扩展到所有负实数。
+- 如果正无穷大可在 T 中表示，则 T 的范围将扩展到所有正实数。
+
+由于负无穷大和正无穷大在 [ISO/IEC/IEEE 60559](https://www.iso.org/standard/80985.html) 格式中是可表示的，因此所有实数都位于符合 ISO/IEC/IEEE 60559 的浮点类型可表示值的范围内。
